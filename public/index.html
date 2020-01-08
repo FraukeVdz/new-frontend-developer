@@ -10,6 +10,174 @@
     <title>Noordhollands Dagblad</title>
   </head>
   <body>
-    <img src="logo.svg" alt="Noordhollands Dagblad" height="26" width="208" />
+    <header class="header border-bottom">
+      <a href="#" class="header__back">Terug</a>
+      <img src="logo.svg" alt="Noordhollands Dagblad" height="26" width="208" class="logo" />
+      <button type="button" class="nav-button js-open-nav"><i class="icon-menu"></i></button>
+    </header>
+    <nav class="navigation js-nav">
+      <button type="button" class="navigation__close js-close-nav">Sluiten</button>
+      <ul class="navigation__list">
+        <li class="naviagtion__item"><a href="#" class="navigation__link">Binnenland</a></li>
+        <li class="naviagtion__item"><a href="#" class="navigation__link">Buitenland</a></li>
+        <li class="naviagtion__item"><a href="#" class="navigation__link">Regio</a></li>
+        <li class="naviagtion__item"><a href="#" class="navigation__link">Sport</a></li>
+        <li class="naviagtion__item"><a href="#" class="navigation__link">TV</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1>Jan Blockhuijsen met achtervolgingsploeg buiten olympische finale</h1>
+      <div class="image-slider border-bottom">
+        <div class="image-slider__container  js-image-slider-container">
+            <div class="image-slider__item js-image-slider-item">
+              <figure>
+                  <img src="https://dummyimage.com/600x400/000/fff" data-src="https://dummyimage.com/600x400/000/fff" alt="" />
+                  <figcaption>Van voor naar achter: Sven Kramer, Jan Blokhuijsen en Patrick Roest in actie tijdens de halve finale.</figcaption>
+              </figure>
+            </div>
+            <div class="image-slider__item js-image-slider-item">
+              <figure>
+                  <img src="" data-src="https://dummyimage.com/600x400/f00/000" alt="" />
+                  <figcaption>Lorem ipsum</figcaption>
+              </figure>
+            </div>
+            <div class="image-slider__item js-image-slider-item">
+              <figure>
+                  <img src="" data-src="https://dummyimage.com/600x400/ff0/000" alt="" />
+                  <figcaption>Lorem ipsum</figcaption>
+              </figure>
+            </div>
+            <div class="image-slider__item js-image-slider-item">
+              <figure>
+                  <img src="" data-src="https://dummyimage.com/600x400/fff/000" alt="" />
+                  <figcaption>Lorem ipsum</figcaption>
+              </figure>
+            </div>
+            <div class="image-slider__item js-image-slider-item">
+              <figure>
+                  <img src="" data-src="https://dummyimage.com/600x400/f0f0f0/000" alt="" />
+                  <figcaption>Lorem ipsum</figcaption>
+              </figure>
+            </div>
+        </div>
+        <div class="image-slider__nav">
+          <ul class="image-slider__nav-list">
+            <li class="image-slider__nav-list-item js-image-slider-nav-list-item is-active"></li>
+            <li class="image-slider__nav-list-item js-image-slider-nav-list-item"></li>
+            <li class="image-slider__nav-list-item js-image-slider-nav-list-item"></li>
+            <li class="image-slider__nav-list-item js-image-slider-nav-list-item"></li>
+            <li class="image-slider__nav-list-item js-image-slider-nav-list-item"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="article-author border-bottom">
+        <img src="https://dummyimage.com/50x50/000/fff" alt="Pieter van den Hoogenband"  class="article-author__image" />
+        <div class="article-author__content">
+          <div class="article-author__name"><strong>Pieter van den Hoogenband</strong></div>
+          <div class="article-author__date">27 min geleden</div>
+        </div>
+      </div>
+      <div class="social-share border-bottom">
+        <ul class="social-share__list">
+          <li class="social-share__item">
+            <a href="" class="social-share__icon social-share__icon--facebook"><i class="icon-facebook"></i></a>
+          </li>
+          <li class="social-share__item">
+            <a href="" class="social-share__icon social-share__icon--twitter"><i class="icon-twitter"></i></a>
+          </li>
+          <li class="social-share__item">
+            <a href="whatsapp://send?text=Jan%20Blockhuijsen%20met%20achtervolgingsploeg%20buiten%20olympische%20finale" class="social-share__icon social-share__icon--whatsapp"><i class="icon-whatsapp"></i></a>
+          </li>
+          <li class="social-share__item">
+            <a href="mailto:?subject=Jan%20Blockhuijsen%20met%20achtervolgingsploeg%20buiten%20olympische%20finale&body=De%20Nederlandse%20mannenploeg%2C%20met%20Jan%20Blokhuijsen%20uit%20Zuid-Schardwoude%2C%20heeft%20het%20bij%20de%20Winterspelen%20in%20de%20halve%20finales." class="social-share__icon social-share__icon--mail"><i class="icon-mail"></i></a>
+          </li>
+          <li class="social-share__item">
+            <input type="text" id="url" value="" class="hidden">
+            <button type="button" class="social-share__icon social-share__icon--link js-copy-link"><i class="icon-link"></i></button>
+          </li>
+        </ul>
+      </div>
+      <div class="article-content">
+        <p class="article-content__location"><strong>Alkmaar</strong></p>
+        <p class="article-content__intro"><strong>De Nederlandse mannenploeg, met Jan Blokhuijsen uit Zuid-Schardwoude, heeft het bij de Winterspelen in de halve finales.</strong></p>
+        <p>Het schaatstrio van Oranje moest woensdagmiddag in Gangneung buigen.</p>
+
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/swipe-listener@latest/dist/swipe-listener.min.js"></script>
+
+    <script>
+      // functionality for menu
+      const openNavButton = document.getElementsByClassName('js-open-nav')[0];
+      const closeNavButton = document.getElementsByClassName('js-close-nav')[0];
+      const nav =  document.getElementsByClassName('js-nav')[0];
+      openNavButton.addEventListener('click', openNav);
+      closeNavButton.addEventListener('click', closeNav);
+
+      function openNav() {
+        nav.classList.add('is-active');
+      }
+      
+      function closeNav() {
+        nav.classList.remove('is-active');
+      }
+
+      // functionality for image slider
+      const container = document.getElementsByClassName('js-image-slider-container')[0];
+      const navListItems = document.getElementsByClassName('js-image-slider-nav-list-item');
+      const navListItemsLength = navListItems.length;
+      const listener = SwipeListener(container);
+      const maxItem = 5;
+      let sliderItem = 0;
+
+      container.addEventListener('swipe', function (e) {
+        const direction = e.detail.directions;
+        if(direction.left) {
+          sliderItem = sliderItem + 1;
+
+          if(sliderItem >= maxItem) {
+            sliderItem = maxItem;
+            return;
+          }
+        }
+        if(direction.right) {
+          sliderItem = sliderItem - 1;
+
+          if(sliderItem < 0) {
+            sliderItem = 0;
+            return;
+          }
+        }
+        container.style.marginLeft = 'calc(' + (sliderItem) +' * -100%)';
+
+        const img = container.querySelector('.js-image-slider-item:nth-child('+(sliderItem + 1)+') img');
+        const src = img.getAttribute('data-src');
+        img.setAttribute('src', src);
+
+        for(let i = 0; i < navListItemsLength; i++) {
+          navListItems[i].classList.remove('is-active');
+        }
+
+        navListItems[sliderItem].classList.add('is-active');
+      });
+
+      // functionality for copying link
+      const btnCopyLink = document.getElementsByClassName('js-copy-link')[0];
+      const input = document.getElementById("url");
+
+      btnCopyLink.addEventListener('click', copyLink);
+
+      function copyLink() {
+        input.value = location.href;
+
+        input.select();
+        input.setSelectionRange(0, 99999); /*For mobile devices*/
+
+        document.execCommand("copy");
+
+        alert("Copied the text: " + input.value);
+      }  
+    </script>
   </body>
 </html>
